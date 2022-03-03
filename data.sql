@@ -10,3 +10,12 @@ INSERT INTO animals VALUES (7, 'Squirtie', '1993/04/02', 3, '0', -12.13);
 INSERT INTO animals VALUES (8, 'Angemon', '2005/06/12', 1, '1', -45);
 INSERT INTO animals VALUES (9, 'Boarmon', '2005/06/7', 7, '1', 20.4);
 INSERT INTO animals VALUES (10, 'Blossom', '1998/10/13', 3, '1', 17);
+
+VALUES ('Sam Smith', 34),
+	('Jennifer Orwell', 19),
+	('Bob', 45),
+	('Melody Pond', 77),
+	('Dean Winchester', 14),
+	('Jodie Whittaker', 38);
+
+INSERT INTO species (name) VALUES ('Pokemon'), ('Digimon');
