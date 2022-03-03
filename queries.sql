@@ -13,7 +13,8 @@ SELECT COUNT(*) FROM animals WHERE escape_attempts < 1;
 SELECT AVG(weight) FROM animals;
 SELECT neutered, SUM(escape_attempts) FROM animals GROUP BY neutered
 SELECT species, MIN(weight), MAX(weight) FROM animals GROUP BY species;
-SELECT neutered, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1990/01/01' AND '2000/31/12' GROUP BY neutered;
+SELECT neutered, AVG(escape_attempts) FROM animals 
+    WHERE date_of_birth BETWEEN '1990/01/01' AND '2000/31/12' GROUP BY neutered;
 
 BEGIN;
 UPDATE animals SET species = 'unspecified';
