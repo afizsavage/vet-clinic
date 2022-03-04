@@ -26,6 +26,16 @@ CREATE TABLE vets (
     date_of_graduatation DATE
 );
 
+CREATE TABLE specializations (
+	species_id INT REFERENCES species (id),
+	vet_id INT REFERENCES vets (id)
+);
+
+CREATE TABLE visits (
+	animal_id INT REFERENCES animals (id),
+	vet_id INT REFERENCES vets (id),
+	date_of_visit DATE
+);
 
 ALTER TABLE animals ADD species VARCHAR(100);
 ALTER TABLE animals ALTER COLUMN id SET NOT NULL;
