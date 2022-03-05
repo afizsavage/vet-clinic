@@ -79,3 +79,23 @@ SELECT owners.full_name, COUNT(owners.full_name) FROM animals
     ON animals.owner_id = owners.id
     GROUP BY owners.full_name
     ORDER BY COUNT(owners.full_name) DESC;
+
+-- Who was the last animal seen by William Tatcher?
+SELECT vets.name, visits.date_of_visit, animals.name FROM vets
+    JOIN visits ON vets.id = visits.vet_id
+    JOIN animals ON visits.animal_id = animals.id
+    WHERE vets.name = 'William Tatcher'
+    ORDER BY visits.date_of_visit DESC;
+
+-- How many different animals did Stephanie Mendez see?
+SELECT vets.name, visits.date_of_visit, animals.name FROM vets
+    JOIN visits ON vets.id = visits.vet_id 
+    JOIN animals ON visits.animal_id = animals.id 
+    WHERE vets.name = 'Stephanie Mendez' ORDER BY visits.date_of_visit DESC;
+
+-- List all vets and their specialties, including vets with no specialties
+SELECT vets.name, species.name FROM vets 
+    LEFT JOIN specializations ON vets.id = specializations.vet_id 
+    LEFT JOIN species ON specializations.species_id = species.id;
+
+-- List all animals that visited Stephanie Mendez between April 1st and August 30th, 2020

@@ -59,7 +59,7 @@ INSERT INTO specializations VALUES ((SELECT id FROM species WHERE name = 'Pokemo
     ((SELECT id FROM species WHERE name = 'Pokemon'),
     (SELECT id FROM vets WHERE name = 'Stephanie Mendez')),
     ((SELECT id FROM species WHERE name = 'Digimon'),
-    (SELECT id FROM species WHERE name = 'Jack Harkness'));
+    (SELECT id FROM vets WHERE name = 'Jack Harkness'));
 
 INSERT INTO visits VALUES 
     ((SELECT id FROM animals WHERE name = 'Agumon'),
