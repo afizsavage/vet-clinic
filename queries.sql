@@ -138,3 +138,7 @@ SELECT vets.name, visits.date_of_visit, animals.name FROM vets
     JOIN animals ON visits.animal_id = animals.id 
     WHERE vets.name = 'Maisy Smith'
     ORDER BY visits.date_of_visit DESC;
+
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
+EXPLAIN ANALYZE SELECT * FROM visits where vet_id = 2;
