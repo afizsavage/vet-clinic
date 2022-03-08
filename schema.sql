@@ -46,3 +46,7 @@ ALTER TABLE animals ADD species_id INT REFERENCES species(id);
 ALTER TABLE animals ADD owner_id INT REFERENCES owners(id);
 
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX ON visits (animal_id);
+CREATE INDEX vets_idx ON visits (vet_id);
+CREATE INDEX ON owners (email);
