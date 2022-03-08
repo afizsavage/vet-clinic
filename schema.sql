@@ -44,3 +44,5 @@ ALTER TABLE animals ADD CONSTRAINT animals_pk PRIMARY KEY (id);
 ALTER TABLE animals DROP COLUMN species;
 ALTER TABLE animals ADD species_id INT REFERENCES species(id);
 ALTER TABLE animals ADD owner_id INT REFERENCES owners(id);
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
